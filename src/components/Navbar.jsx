@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 import { FaBars } from 'react-icons/fa';
 
-export const Navbar = () => {
+export const Navbar = ({ toggle }) => {
   return (
     <>
       <nav>
@@ -12,7 +12,7 @@ export const Navbar = () => {
             dolla
           </LinkR>
 
-          <div className="mobileIcon">
+          <div className="mobileIcon" onClick={toggle}>
             <FaBars />
           </div>
 

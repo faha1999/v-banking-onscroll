@@ -6,35 +6,39 @@ import { Link as LinkR } from 'react-router-dom';
 
 const SidebarContainer = styled.aside`
   top: 0;
-  //   opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  //   top: ${({ isOpen }) => (isOpen ? '0' : '100%')};
+  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
+  top: ${({ isOpen }) => (isOpen ? '0' : '100%')};
 `;
 
-export const Sidebar = () => {
+export const Sidebar = ({ toggle, isOpen }) => {
   return (
-    <SidebarContainer className="SidebarContainer">
-      <div className="icon">
+    <SidebarContainer
+      className="SidebarContainer"
+      isOpen={isOpen}
+      onClick={toggle}
+    >
+      <div className="icon" onClick={toggle}>
         <FaTimes className="closeIcon" />
       </div>
 
       <div className="wrapper">
         <ul className="menu">
-          <LinkS className="link" to="about">
+          <LinkS onClick={toggle} className="link" to="about">
             About
           </LinkS>
-          <LinkS className="link" to="discover">
+          <LinkS onClick={toggle} className="link" to="discover">
             Discover
           </LinkS>
-          <LinkS className="link" to="services">
+          <LinkS onClick={toggle} className="link" to="services">
             Services
           </LinkS>
-          <LinkS className="link" to="signup">
+          <LinkS onClick={toggle} className="link" to="signup">
             Sign Up
           </LinkS>
         </ul>
 
         <div className="sideBtnWrap">
-          <LinkR className="sideBarRoute" to="/signin">
+          <LinkR onClick={toggle} className="sideBarRoute" to="/signin">
             Sign In
           </LinkR>
         </div>
