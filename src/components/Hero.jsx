@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import HeroVideo from '../assets/video/faha1999.mp4';
+import { Button } from './styles/globalStyle';
 import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md';
 
 const ArrowForward = styled(MdArrowForward)`
@@ -34,9 +35,16 @@ export const Hero = () => {
         </p>
 
         <div className="heroBtn">
-          <button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}>
+          <Button
+            className="button"
+            to="signup"
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+            primary="true"
+            dark="true"
+          >
             Get started {hover ? <ArrowForward /> : <ArrowRight />}
-          </button>
+          </Button>
         </div>
       </div>
     </div>
