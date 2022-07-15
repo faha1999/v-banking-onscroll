@@ -3,6 +3,7 @@ import { Hero } from '../components/Hero';
 import { Info } from '../components/Info';
 import { Navbar } from '../components/Navbar';
 import { Sidebar } from '../components/Sidebar';
+import { InfoData } from '../data/InfoData';
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ export const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Hero />
-      <Info />
+      <Info {...InfoData} />
     </>
   );
 };

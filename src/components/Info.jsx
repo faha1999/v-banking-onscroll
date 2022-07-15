@@ -32,20 +32,47 @@ const Column2 = styled.div`
   grid-area: cal2;
 `;
 
-export const Info = () => {
+export const Info = ({
+  lightBg,
+  id,
+  imgStart,
+  topLine,
+  lightText,
+  headline,
+  darkText,
+  description,
+  buttonLabel,
+  img,
+  alt,
+}) => {
   return (
     <>
-      <InfoContainer className="infoContainer">
+      <InfoContainer className="infoContainer" lightBg={lightBg} id={id}>
         <div className="wrapper">
-          <Row className="row">
+          <Row className="row" imgStart={imgStart}>
             <Column1 className="column1">
               <div className="text">
-                <p className="topLine">TopLine</p>
-                <Heading className="heading">Heading</Heading>
-                <SubTitle className="subtitle">subtitle</SubTitle>
+                <p className="topLine">{topLine}</p>
+                <Heading className="heading" lightText={lightText}>
+                  {headline}
+                </Heading>
+                <SubTitle className="subtitle" darkText={darkText}>
+                  {description}
+                </SubTitle>
                 <div className="btn">
-                  <Button className="button" to="home">
-                    Button
+                  <Button
+                    className="button"
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                  >
+                    {buttonLabel}
                   </Button>
                 </div>
               </div>
@@ -53,7 +80,7 @@ export const Info = () => {
 
             <Column2 className="column2">
               <div className="imgWrap">
-                <img src="" alt="" />
+                <img src={img} alt={alt} />
               </div>
             </Column2>
           </Row>
