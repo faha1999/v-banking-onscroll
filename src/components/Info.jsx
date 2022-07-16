@@ -7,11 +7,11 @@ const InfoContainer = styled.div`
 `;
 
 const Row = styled.div`
-  grid-template-columns: ${({ imgStart }) =>
+  grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: ${({ imgStart }) =>
+    grid-template-areas: ${({ imgStart }) =>
       imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
   }
 `;
@@ -25,11 +25,11 @@ const SubTitle = styled.p`
 `;
 
 const Column1 = styled.div`
-  grid-area: cal1;
+  grid-area: col1;
 `;
 
 const Column2 = styled.div`
-  grid-area: cal2;
+  grid-area: col2;
 `;
 
 export const Info = ({
@@ -44,6 +44,9 @@ export const Info = ({
   buttonLabel,
   img,
   alt,
+  primary,
+  dark,
+  dark2,
 }) => {
   return (
     <>
@@ -79,7 +82,7 @@ export const Info = ({
             </Column1>
 
             <Column2 className="column2">
-              <div className="imgWrap">
+              <div className="imgWarp">
                 <img src={img} alt={alt} />
               </div>
             </Column2>

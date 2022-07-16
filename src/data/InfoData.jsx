@@ -9,7 +9,7 @@ export const InfoData = {
     'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, alias.',
   buttonLabel: 'Get Started',
   imgStart: false,
-  img: require('../assets/video/faha1999.mp4'),
+  img: require('../assets/images/labib-agro-firm.jpg'),
   alt: 'Car',
   dark: true,
   primary: true,
