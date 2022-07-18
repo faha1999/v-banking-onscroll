@@ -33,3 +33,21 @@ export const DiscoverData = {
   primary: false,
   darkText: true,
 };
+
+export const SignUpData = {
+  id: 'signup',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Join our team',
+  headline: 'Creating an account is extremely easy',
+  description:
+    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, alias.',
+  buttonLabel: 'Start Now',
+  imgStart: false,
+  img: require('../assets/images/1.png'),
+  alt: 'paper',
+  dark: false,
+  primary: false,
+  darkText: true,
+};

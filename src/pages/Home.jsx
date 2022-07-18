@@ -3,7 +3,7 @@ import { Hero } from '../components/Hero';
 import { Info } from '../components/Info';
 import { Navbar } from '../components/Navbar';
 import { Sidebar } from '../components/Sidebar';
-import { AboutData, DiscoverData } from '../data/InfoData';
+import { AboutData, DiscoverData, SignUpData } from '../data/InfoData';
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +19,7 @@ export const Home = () => {
       <Hero />
       <Info {...AboutData} />
       <Info {...DiscoverData} />
+      <Info {...SignUpData} />
     </>
   );
 };
