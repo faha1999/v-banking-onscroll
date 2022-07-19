@@ -20,8 +20,8 @@ export const Home = () => {
       <Hero />
       <Info {...AboutData} />
       <Info {...DiscoverData} />
-      <Info {...SignUpData} />
       <Services />
+      <Info {...SignUpData} />
     </>
   );
 };

@@ -10,7 +10,7 @@ export const Services = () => {
         {ServicesData.map(({ id, icon, title, details }) => {
           return (
             <div className="card" key={id}>
-              <img className="icon" src={icon} />
+              <img className="icon" src={icon} alt={title} />
               <h2 className="cardTitle">{title}</h2>
               <p className="details">{details}</p>
             </div>
