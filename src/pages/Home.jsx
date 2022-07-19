@@ -4,6 +4,7 @@ import { Info } from '../components/Info';
 import { Navbar } from '../components/Navbar';
 import { Sidebar } from '../components/Sidebar';
 import { AboutData, DiscoverData, SignUpData } from '../data/InfoData';
+import { Services } from '../components/Services';
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,7 @@ export const Home = () => {
       <Info {...AboutData} />
       <Info {...DiscoverData} />
       <Info {...SignUpData} />
+      <Services />
     </>
   );
 };
