@@ -5,6 +5,7 @@ import { Navbar } from '../components/Navbar';
 import { Sidebar } from '../components/Sidebar';
 import { AboutData, DiscoverData, SignUpData } from '../data/InfoData';
 import { Services } from '../components/Services';
+import { Footer } from '../components/Footer';
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,7 @@ export const Home = () => {
       <Info {...DiscoverData} />
       <Services />
       <Info {...SignUpData} />
+      <Footer />
     </>
   );
 };
