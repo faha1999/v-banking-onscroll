@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link as LinkR } from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll';
+import { Link as LinkS, animateScroll as scroll } from 'react-scroll';
 import { FaBars } from 'react-icons/fa';
 import styled from 'styled-components';
 
@@ -23,11 +23,15 @@ export const Navbar = ({ toggle }) => {
     window.addEventListener('scroll', changeNav);
   }, []);
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
       <Nav className="nav" scrollNav={scrollNav}>
         <div className="navContainer">
-          <LinkR to="/" className="logo">
+          <LinkR to="/" className="logo" onClick={toggleHome}>
             dolla
           </LinkR>
 
@@ -37,16 +41,48 @@ export const Navbar = ({ toggle }) => {
 
           <ul className="navMenu">
             <li className="navItem">
-              <LinkS className="link" to="about">
+              <LinkS
+                className="link"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                exact="true"
+              >
                 About
               </LinkS>
-              <LinkS className="link" to="discover">
+              <LinkS
+                className="link"
+                to="discover"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                exact="true"
+              >
                 Discover
               </LinkS>
-              <LinkS className="link" to="services">
+              <LinkS
+                className="link"
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                exact="true"
+              >
                 Services
               </LinkS>
-              <LinkS className="link" to="signup">
+              <LinkS
+                className="link"
+                to="signup"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                exact="true"
+              >
                 Sign Up
               </LinkS>
             </li>

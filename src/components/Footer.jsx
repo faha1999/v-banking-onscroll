@@ -1,4 +1,5 @@
 import React from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 import {
   FaFacebook,
   FaInstagram,
@@ -9,6 +10,10 @@ import {
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <footer>
       <div className="wrap">
@@ -87,7 +92,7 @@ export const Footer = () => {
 
         <div className="socialMedia">
           <div className="mediaWrap">
-            <Link to="/" className="logo">
+            <Link to="/" className="logo" onClick={toggleHome}>
               dolla
             </Link>
             <small className="rights">
