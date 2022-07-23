@@ -1,0 +1,106 @@
+.signInContainer {
+  min-height: 629px;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(
+    108deg,
+    rgba(1, 147, 86, 1) 0%,
+    rgba(10, 201, 122, 1) 100%
+  );
+
+  .fromWrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (max-width: 480px) {
+      height: 80%;
+    }
+
+    .icon {
+      margin-left: 2rem;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 2rem;
+
+      @media screen and (max-width: 400px) {
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .formContent {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media screen and (max-width: 480px) {
+        padding: 10px;
+      }
+
+      form {
+        background: #010101;
+        max-width: 400px;
+        height: auto;
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        margin: 0 auto;
+        padding: 80px 2rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+
+        @media screen and (max-width: 400px) {
+          padding: 2rem 2rem;
+        }
+
+        h1 {
+          margin-bottom: 40px;
+          color: #fff;
+          font-size: 1.24rem;
+          font-weight: 400;
+          text-align: center;
+        }
+
+        label {
+          margin-bottom: 0.5rem;
+          font-size: 0.9rem;
+          color: #fff;
+        }
+
+        input {
+          padding: 1rem 1rem;
+          margin-bottom: 2rem;
+          border: none;
+          border-radius: 0.25rem;
+        }
+
+        button {
+          background: #01bf71;
+          padding: 1rem 0;
+          border: none;
+          border-radius: 0.25rem;
+          color: #fff;
+          font-size: 1.25rem;
+          cursor: pointer;
+        }
+
+        span {
+          text-align: center;
+          margin: 1.5rem;
+          color: #fff;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
