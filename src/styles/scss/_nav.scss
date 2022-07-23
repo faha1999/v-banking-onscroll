@@ -1,7 +1,6 @@
-nav {
-  background: #000;
+.nav {
   height: 80px;
-  //margin-top: -80px;
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,13 +89,13 @@ nav {
 }
 
 @media screen and (max-width: 960px) {
-  nav {
+  .nav {
     transition: 0.8s all ease;
   }
 }
 
 @media screen and (max-width: 768px) {
-  nav {
+  .nav {
     .navContainer {
       .mobileIcon {
         display: block;

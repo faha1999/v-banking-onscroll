@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 import { FaBars } from 'react-icons/fa';
+import styled from 'styled-components';
+
+const Nav = styled.nav`
+  background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
+`;
 
 export const Navbar = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav);
+  }, []);
+
   return (
     <>
-      <nav>
+      <Nav className="nav" scrollNav={scrollNav}>
         <div className="navContainer">
           <LinkR to="/" className="logo">
             dolla
@@ -39,7 +58,7 @@ export const Navbar = ({ toggle }) => {
             </LinkR>
           </div>
         </div>
-      </nav>
+      </Nav>
     </>
   );
 };
